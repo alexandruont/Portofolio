@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 }
             },
             color: {
-                value: '#ffffff'
+                value: ['#ffffff', '#00bfff', '#0080ff', '#4da6ff'] // Mix of white and blue shades
             },
             shape: {
                 type: 'circle',
@@ -22,16 +22,22 @@ document.addEventListener('DOMContentLoaded', function() {
             },
             opacity: {
                 value: 0.5,
-                random: false,
+                random: true, // Makes some particles more/less visible
                 anim: {
-                    enable: false
+                    enable: true,
+                    speed: 1,
+                    opacity_min: 0.1,
+                    sync: false
                 }
             },
             size: {
                 value: 3,
                 random: true,
                 anim: {
-                    enable: false
+                    enable: true,
+                    speed: 2,
+                    size_min: 1,
+                    sync: false
                 }
             },
             line_linked: {
@@ -133,6 +139,32 @@ window.addEventListener('scroll', function() {
         link.classList.remove('active');
         if (link.getAttribute('href') === '#' + current) {
             link.classList.add('active');
+        }
+    });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const sidenav = document.querySelector('.sidenav');
+    
+    hamburger.addEventListener('click', function() {
+        sidenav.classList.toggle('open');
+    });
+    
+    // Close menu when clicking on nav links (mobile)
+    const navLinks = document.querySelectorAll('.nav-item');
+    navLinks.forEach(link => {
+        link.addEventListener('click', function() {
+            if (window.innerWidth <= 768) {
+                sidenav.classList.remove('open');
+            }
+        });
+    });
+    
+    // Close menu when clicking outside (mobile)
+    document.addEventListener('click', function(e) {
+        if (window.innerWidth <= 768 && !sidenav.contains(e.target)) {
+            sidenav.classList.remove('open');
         }
     });
 });

@@ -25,11 +25,21 @@
 </head>
 <body>
     <a href="#home" class="visually-hidden-focusable">Skip to main content</a>
-    <!-- nav -->
+    <!-- Social Icons -->
+    <!-- top right contacts
+    <div class="social-icons">
+        <a href="https://github.com/alexandruont" target="_blank" class="social-icon github" aria-label="GitHub Profile">
+            <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn Profile">
+            <i class="bi bi-linkedin"></i>
+        </a>
+    </div> --> 
+    <!-- nav 
     <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom" aria-label="Navigation bar">
         <div class="container">
             <a class="navbar-brand" href="#home">Alexandru Ont</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navbar options">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
@@ -50,6 +60,45 @@
                         <a class="nav-link" href="#contact" aria-label="Contact me">Contact</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- Side Navigation -->
+    <nav class="sidenav" aria-label="Main navigation">
+        <div class="hamburger">
+            <i class="bi bi-list"></i>
+        </div>
+        
+        <div class="nav-content">
+            <div class="nav-items">
+                <a href="#home" class="nav-item" aria-label="Home" title="Home">
+                    <i class="bi bi-house"></i>
+                </a>
+                <a href="#about" class="nav-item" aria-label="About Me" title="About Me">
+                    <i class="bi bi-person"></i>
+                </a>
+                <a href="#skills" class="nav-item" aria-label="Skills" title="Skills">
+                    <i class="bi bi-code-slash"></i>
+                </a>
+                <a href="#projects" class="nav-item" aria-label="Projects" title="Projects">
+                    <i class="bi bi-folder"></i>
+                </a>
+                <a href="#contact" class="nav-item" aria-label="Contact" title="Contact">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+            
+            <!-- Social Icons in Sidenav -->
+            <div class="social-links">
+                <a href="https://github.com/alexandruont" target="_blank" class="social-item" aria-label="GitHub" title="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="social-item" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="mailto:alex.ont@icloud.com" class="social-item" aria-label="Email" title="Email">
+                    <i class="bi bi-envelope"></i>
+                </a>
             </div>
         </div>
     </nav>
@@ -85,8 +134,8 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0" data-aos="fade-right">
-                    <div class="profile-img mx-auto">
-                        <i class="bi bi-person-circle"></i>
+                    <div class="profile-img-container">
+                        <img src="assets/images/IMG_4049.png" alt="Alexandru Ont" class="profile-img">
                     </div>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
@@ -150,7 +199,7 @@
                             <div class="skill-tags">
                                 <span class="skill-tag">JavaScript</span>
                                 <span class="skill-tag">HTML/CSS</span>
-                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">PHP</span>
                                 <span class="skill-tag">Node.js</span>
                                 <span class="skill-tag">Bootstrap</span>
                                 <span class="skill-tag">FastAPI</span>
@@ -209,8 +258,7 @@
                                 <span class="tech-tag">React</span>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+                                <a href="https://github.com/alexandruont/OnlineYOLODetection" class="btn btn-outline-primary btn-sm">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -232,7 +280,6 @@
                                 <span class="tech-tag">Scikit-learn</span>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
                                 <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
                             </div>
                         </div>
@@ -255,7 +302,6 @@
                                 <span class="tech-tag">PostgreSQL</span>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
                                 <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
                             </div>
                         </div>
@@ -274,53 +320,6 @@
                     <p class="text-muted mt-4" data-aos="fade-up" data-aos-delay="200">
                         I'm always open to discussing new opportunities, interesting projects, or just having a chat about tech!
                     </p>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card contact-card">
-                        <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <a href="mailto:alex.ont@icloud.com" class="text-decoration-none" aria-label="Email">
-                                    <i class="bi bi-envelope"></i>
-                                </a>
-                            </div>
-                            <h5 class="card-title">Email</h5>
-                            <a href="mailto:alex.ont@icloud.com" class="text-decoration-none" aria-label="Email">
-                                alex.ont@icloud.com
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card contact-card">
-                        <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="text-decoration-none" aria-label="LinkedIn">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                            </div>
-                            <h5 class="card-title">LinkedIn</h5>
-                            <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="text-decoration-none" aria-label="LinkedIn">
-                                linkedin.com/in/alexandru-mihai-ont
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card contact-card">
-                        <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <a href="https://github.com/alexandruont" target="_blank" class="text-decoration-none" aria-label="GitHub">
-                                    <i class="bi bi-github"></i>
-                                </a>
-                            </div>
-                            <h5 class="card-title">GitHub</h5>
-                            <a href="https://github.com/alexandruont" target="_blank" class="text-decoration-none" aria-label="GitHub">
-                                github.com/alexandruont
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
