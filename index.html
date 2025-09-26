@@ -3,10 +3,12 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alexandru Ont | Machine Learning Developer & Web Developer specializing in AI algorithms, data science, and modern web applications. View my portfolio of ML projects and web development work.">
     <title>Alexandru's Portofolio</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
     <link rel="stylesheet" href="css/style.css">
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
@@ -22,49 +24,99 @@
     <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
 </head>
 <body>
-    <!-- nav -->
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom">
+    <a href="#home" class="visually-hidden-focusable">Skip to main content</a>
+    <!-- Social Icons -->
+    <!-- top right contacts
+    <div class="social-icons">
+        <a href="https://github.com/alexandruont" target="_blank" class="social-icon github" aria-label="GitHub Profile">
+            <i class="bi bi-github"></i>
+        </a>
+        <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn Profile">
+            <i class="bi bi-linkedin"></i>
+        </a>
+    </div> --> 
+    <!-- nav 
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom" aria-label="Navigation bar">
         <div class="container">
             <a class="navbar-brand" href="#home">Alexandru Ont</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navbar options">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto">
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" aria-label="Home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
+                        <a class="nav-link" href="#about" aria-label="Read more about me">About</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
+                        <a class="nav-link" href="#skills" aria-label="View my skills">Skills</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#projects">Projects</a>
+                        <a class="nav-link" href="#projects" aria-label="View my portfolio projects">Projects</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" aria-label="Contact me">Contact</a>
                     </li>
                 </ul>
+            </div>
+        </div>
+    </nav> -->
+    <!-- Side Navigation -->
+    <nav class="sidenav" aria-label="Main navigation">
+        <div class="hamburger">
+            <i class="bi bi-list"></i>
+        </div>
+        
+        <div class="nav-content">
+            <div class="nav-items">
+                <a href="#home" class="nav-item" aria-label="Home" title="Home">
+                    <i class="bi bi-house"></i>
+                </a>
+                <a href="#about" class="nav-item" aria-label="About Me" title="About Me">
+                    <i class="bi bi-person"></i>
+                </a>
+                <a href="#skills" class="nav-item" aria-label="Skills" title="Skills">
+                    <i class="bi bi-code-slash"></i>
+                </a>
+                <a href="#projects" class="nav-item" aria-label="Projects" title="Projects">
+                    <i class="bi bi-folder"></i>
+                </a>
+                <a href="#contact" class="nav-item" aria-label="Contact" title="Contact">
+                    <i class="bi bi-envelope"></i>
+                </a>
+            </div>
+            
+            <!-- Social Icons in Sidenav -->
+            <div class="social-links">
+                <a href="https://github.com/alexandruont" target="_blank" class="social-item" aria-label="GitHub" title="GitHub">
+                    <i class="bi bi-github"></i>
+                </a>
+                <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="social-item" aria-label="LinkedIn" title="LinkedIn">
+                    <i class="bi bi-linkedin"></i>
+                </a>
+                <a href="mailto:alex.ont@icloud.com" class="social-item" aria-label="Email" title="Email">
+                    <i class="bi bi-envelope"></i>
+                </a>
             </div>
         </div>
     </nav>
 
     <!-- hero -->
     <section id="home" class="hero-section text-white">
+        <div id="particles-js"></div>
         <div class="container">
             <div class="row justify-content-center text-center">
                 <div class="col-lg-8 hero-content">
                     <h1 class="display-3 fw-bold mb-4" data-aos="fade-up">Alexandru Ont</h1>
-                    <p class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Machine Learning Developer & Web Developer</p>
+                    <h2 class="lead mb-4" data-aos="fade-up" data-aos-delay="200">Machine Learning Developer & Web Developer</h2>
                     <p class="fs-5 mb-5" data-aos="fade-up" data-aos-delay="400">
                         Passionate about creating intelligent solutions and beautiful web experiences. 
                         Specializing in ML algorithms, data science, and modern web development.
                     </p>
                     <div data-aos="fade-up" data-aos-delay="600">
                         <a href="#projects" class="btn btn-primary-custom btn-custom me-3">View My Work</a>
-                        <a href="#contact" class="btn btn-outline-custom btn-custom">Get In Touch</a>
                     </div>
                 </div>
             </div>
@@ -81,25 +133,27 @@
             </div>
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0" data-aos="fade-right">
-                    <div class="profile-img mx-auto">
-                        <i class="bi bi-person-circle"></i>
+                    <div class="profile-img-container">
+                        <img src="assets/images/IMG_4049.png" alt="Alexandru Ont" class="profile-img">
                     </div>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
                     <h3 class="text-primary mb-4">Hello! I'm a Machine Learning Developer</h3>
                     <p class="text-muted fs-6 mb-4">
-                        I'm passionate about leveraging the power of machine learning to solve real-world problems. 
-                        With a strong background in data science and a growing interest in web development, 
-                        I enjoy creating end-to-end solutions that bridge the gap between complex algorithms and user-friendly interfaces.
+                        Hi, I’m Alexandru, a <strong>Machine Learning Developer</strong> with a passion for turning complex data 
+                        into meaningful solutions. My journey started when I built my first object detection model with YOLO
+                        in university, and I’ve been hooked on the challenge of solving real-world problems with AI ever since.
                     </p>
                     <p class="text-muted fs-6 mb-4">
-                        My journey in tech started with a fascination for data patterns and has evolved into building 
-                        scalable ML models and deploying them through modern web applications. I'm always eager to learn 
-                        new technologies and tackle challenging problems.
+                        I enjoy working at the intersection of <strong>machine learning</strong> and <strong>software development</strong>, 
+                        where I can bring ideas from research into practical, user-friendly applications. 
+                        Whether it’s experimenting with neural networks, deploying models into production, or 
+                        optimizing performance, I love the mix of creativity and engineering.
                     </p>
                     <p class="text-muted fs-6">
-                        When I'm not coding, you can find me exploring the latest ML research papers, contributing to 
-                        open-source projects, or experimenting with new web frameworks.
+                        Outside of coding, I constantly educate myself through <strong>research papers, online courses</strong>, 
+                        and exploring design principles to understand how people interact with technology. 
+                        I’m passionate about building solutions that make life smarter and simpler.
                     </p>
                 </div>
             </div>
@@ -124,12 +178,12 @@
                             <h4 class="card-title">Machine Learning</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">Python</span>
-                                <span class="skill-tag">TensorFlow</span>
+                                <span class="skill-tag">TensorFlow & Keras</span>
                                 <span class="skill-tag">PyTorch</span>
                                 <span class="skill-tag">Scikit-learn</span>
                                 <span class="skill-tag">Pandas</span>
                                 <span class="skill-tag">NumPy</span>
-                                <span class="skill-tag">Keras</span>
+                                <span class="skill-tag">YOLO & Ultralytics</span>
                             </div>
                         </div>
                     </div>
@@ -144,7 +198,7 @@
                             <div class="skill-tags">
                                 <span class="skill-tag">JavaScript</span>
                                 <span class="skill-tag">HTML/CSS</span>
-                                <span class="skill-tag">React</span>
+                                <span class="skill-tag">PHP</span>
                                 <span class="skill-tag">Node.js</span>
                                 <span class="skill-tag">Bootstrap</span>
                                 <span class="skill-tag">FastAPI</span>
@@ -166,7 +220,7 @@
                                 <span class="skill-tag">AWS</span>
                                 <span class="skill-tag">Jupyter</span>
                                 <span class="skill-tag">MongoDB</span>
-                                <span class="skill-tag">PostgreSQL</span>
+                                <span class="skill-tag">MySQL</span>
                                 <span class="skill-tag">Linux</span>
                             </div>
                         </div>
@@ -194,8 +248,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Predictive Analytics Dashboard</h4>
                             <p class="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. Proin facilisis ultricies varius. Sed tempor lacus mauris, nec varius dui aliquet non. Phasellus ut eros aliquet, ullamcorper quam a, varius magna. Integer tempus, eros quis mollis convallis, purus quam commodo elit, id commodo quam lacus sit amet dui. Aenean et rutrum eros. Vivamus faucibus vitae ligula sit amet consequat. Sed eget nisl eget magna tempor condimentum sit amet non sapien.
-                            </p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. 
                             <div class="mb-3">
                                 <span class="tech-tag">Python</span>
                                 <span class="tech-tag">TensorFlow</span>
@@ -203,8 +256,7 @@
                                 <span class="tech-tag">React</span>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
-                                <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+                                <a href="https://github.com/alexandruont/OnlineYOLODetection" class="btn btn-outline-primary btn-sm">GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -217,8 +269,7 @@
                         <div class="card-body">
                             <h4 class="card-title">E-commerce Platform</h4>
                             <p class="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. Proin facilisis ultricies varius. Sed tempor lacus mauris, nec varius dui aliquet non. Phasellus ut eros aliquet, ullamcorper quam a, varius magna. Integer tempus, eros quis mollis convallis, purus quam commodo elit, id commodo quam lacus sit amet dui. Aenean et rutrum eros. Vivamus faucibus vitae ligula sit amet consequat. Sed eget nisl eget magna tempor condimentum sit amet non sapien.
-                            </p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. 
                             <div class="mb-3">
                                 <span class="tech-tag">React</span>
                                 <span class="tech-tag">Node.js</span>
@@ -226,7 +277,6 @@
                                 <span class="tech-tag">Scikit-learn</span>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
                                 <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
                             </div>
                         </div>
@@ -240,8 +290,7 @@
                         <div class="card-body">
                             <h4 class="card-title">Data Visualization Suite</h4>
                             <p class="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. Proin facilisis ultricies varius. Sed tempor lacus mauris, nec varius dui aliquet non. Phasellus ut eros aliquet, ullamcorper quam a, varius magna. Integer tempus, eros quis mollis convallis, purus quam commodo elit, id commodo quam lacus sit amet dui. Aenean et rutrum eros. Vivamus faucibus vitae ligula sit amet consequat. Sed eget nisl eget magna tempor condimentum sit amet non sapien.
-                            </p>
+                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus.
                             <div class="mb-3">
                                 <span class="tech-tag">D3.js</span>
                                 <span class="tech-tag">Python</span>
@@ -249,7 +298,6 @@
                                 <span class="tech-tag">PostgreSQL</span>
                             </div>
                             <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-primary btn-sm">Live Demo</a>
                                 <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
                             </div>
                         </div>
@@ -268,53 +316,6 @@
                     <p class="text-muted mt-4" data-aos="fade-up" data-aos-delay="200">
                         I'm always open to discussing new opportunities, interesting projects, or just having a chat about tech!
                     </p>
-                </div>
-            </div>
-            <div class="row g-4 justify-content-center">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card contact-card">
-                        <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <a href="mailto:alex.ont@icloud.com" class="text-decoration-none">
-                                    <i class="bi bi-envelope"></i>
-                                </a>
-                            </div>
-                            <h5 class="card-title">Email</h5>
-                            <a href="mailto:alex.ont@icloud.com" class="text-decoration-none">
-                                alex.ont@icloud.com
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card contact-card">
-                        <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="text-decoration-none">
-                                    <i class="bi bi-linkedin"></i>
-                                </a>
-                            </div>
-                            <h5 class="card-title">LinkedIn</h5>
-                            <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="text-decoration-none">
-                                linkedin.com/in/alexandru-mihai-ont
-                            </a>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card contact-card">
-                        <div class="card-body text-center">
-                            <div class="contact-icon">
-                                <a href="https://github.com/alexandruont" target="_blank" class="text-decoration-none">
-                                    <i class="bi bi-github"></i>
-                                </a>
-                            </div>
-                            <h5 class="card-title">GitHub</h5>
-                            <a href="https://github.com/alexandruont" target="_blank" class="text-decoration-none">
-                                github.com/alexandruont
-                            </a>
-                        </div>
-                    </div>
                 </div>
             </div>
         </div>
