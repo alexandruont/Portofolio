@@ -10,6 +10,9 @@
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     line-height: 1.6;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background-attachment: fixed;
+    min-height: 100vh;
 }
 
 html {
@@ -55,29 +58,34 @@ html {
     width: 100%;
 }
 
+/* Particles across whole page */
+body::after {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="10" cy="90" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    animation: float 20s infinite linear;
+    opacity: 0.1;
+    pointer-events: none;
+    z-index: 0;
+}
+
+@keyframes float {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
 /* Hero Section */
 .hero-section {
     height: 100vh;
-    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    background: transparent;
     display: flex;
     align-items: center;
     position: relative;
     overflow: hidden;
-}
-
-.hero-section::before {
-    content: '';
-    position: absolute;
-    width: 200%;
-    height: 200%;
-    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="100" height="100" patternUnits="userSpaceOnUse"><circle cx="25" cy="25" r="1" fill="white" opacity="0.1"/><circle cx="75" cy="75" r="1" fill="white" opacity="0.1"/><circle cx="50" cy="10" r="1" fill="white" opacity="0.1"/><circle cx="10" cy="90" r="1" fill="white" opacity="0.1"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
-    animation: float 20s infinite linear;
-    opacity: 0.1;
-}
-
-@keyframes float {
-    0% { transform: translate(-50%, -50%) rotate(0deg); }
-    100% { transform: translate(-50%, -50%) rotate(360deg); }
 }
 
 .hero-content {
@@ -113,6 +121,25 @@ html {
     background: white;
     color: var(--primary);
     transform: translateY(-3px);
+}
+
+/* Section backgrounds with white containers */
+.section-padding {
+    padding: 5rem 0;
+    background: transparent;
+}
+
+.section-padding.bg-light {
+    background: transparent !important;
+}
+
+.section-padding .container {
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 /* Profile Image */
@@ -198,7 +225,7 @@ html {
 }
 
 .project-image {
-    height: 200px;
+    height: 150px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -271,6 +298,21 @@ html {
     padding: 5rem 0;
 }
 
+/* Footer */
+footer {
+    background: rgba(33, 37, 41, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    margin-top: 2rem;
+}
+
+footer .container {
+    background: transparent !important;
+    box-shadow: none !important;
+    border: none !important;
+    padding: 1rem !important;
+}
+
 /* Responsive adjustments */
 @media (max-width: 768px) {
     .hero-section h1 {
@@ -282,15 +324,28 @@ html {
         height: 200px;
         font-size: 3rem;
     }
+    
+    .section-padding .container {
+        padding: 2rem 1.5rem;
+    }
+}
+
+/* All content positioned above particles */
+.hero-section,
+.section-padding,
+.sidenav,
+footer {
+    position: relative;
+    z-index: 1;
 }
 
 #particles-js {
-    position: absolute;
+    position: fixed;
     width: 100%;
     height: 100%;
     top: 0;
     left: 0;
-    z-index: 1;
+    z-index: 0;
 }
 
 .hero-content {
@@ -317,7 +372,7 @@ html {
   z-index: 1000;
 }
 
- .profile-img-container {
+.profile-img-container {
     width: 300px;
     height: 300px;
     border-radius: 50%;
@@ -328,7 +383,7 @@ html {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0 auto; /* Ensures centering */
+    margin: 0 auto;
 }
 
 .profile-img-container:hover {
@@ -347,10 +402,9 @@ html {
     .profile-img-container {
         width: 200px;
         height: 200px;
-        margin: 0 auto 2rem auto; /* Center and add bottom margin */
+        margin: 0 auto 2rem auto;
     }
     
-    /* Ensure the column is also centered */
     .about .col-lg-4 {
         display: flex;
         justify-content: center;
@@ -358,7 +412,6 @@ html {
         flex-direction: column;
     }
     
-    /* Center the entire about section content on mobile */
     .about .row {
         text-align: center;
     }
@@ -368,7 +421,6 @@ html {
     }
 }
 
-/* Extra small devices */
 @media (max-width: 576px) {
     .profile-img-container {
         width: 180px;
@@ -376,60 +428,7 @@ html {
     }
 }
 
-.social-icons {
-    position: absolute;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
-    display: flex;
-    gap: 15px;
-}
-
-.social-icon {
-    width: 50px;
-    height: 50px;
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    transition: all 0.3s ease;
-}
-
-.social-icon:hover {
-    background: rgba(255, 255, 255, 0.2);
-    color: white;
-    transform: translateY(-2px);
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
-}
-
-.social-icon.github:hover {
-    background: #333;
-}
-
-.social-icon.linkedin:hover {
-    background: #0077b5;
-}
-
-@media (max-width: 768px) {
-    .social-icons {
-        top: 15px;
-        right: 15px;
-        gap: 10px;
-    }
-    
-    .social-icon {
-        width: 40px;
-        height: 40px;
-        font-size: 16px;
-    }
-}
-
+/* Sidenav styles */
 .sidenav {
     position: fixed;
     right: 20px;
@@ -544,6 +543,8 @@ html {
         transform: none;
         overflow: hidden;
         transition: all 0.3s ease;
+        background: var(--primary);
+        border: 1px solid rgba(255, 255, 255, 0.3);
     }
     
     .sidenav.open {
@@ -551,6 +552,8 @@ html {
         height: auto;
         padding: 20px;
         border-radius: 15px;
+        background: linear-gradient(135deg, var(--primary) 0%, rgb(95, 24, 121) 100%);
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
     }
     
     .hamburger {
@@ -596,18 +599,47 @@ html {
         justify-content: center;
         gap: 10px;
         padding-top: 15px;
-        border-top: 1px solid rgba(255, 255, 255, 0.2);
+        border-top: 1px solid rgba(255, 255, 255, 0.3);
     }
     
     .nav-item {
         width: 35px;
         height: 35px;
         font-size: 16px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .nav-item:hover {
+        background: rgba(255, 255, 255, 0.3);
+        color: white;
+        transform: scale(1.1);
     }
     
     .social-item {
         width: 30px;
         height: 30px;
         font-size: 14px;
+        background: rgba(255, 255, 255, 0.2);
+        color: white;
+        border: 1px solid rgba(255, 255, 255, 0.3);
+    }
+    
+    .social-item:hover {
+        color: white;
+        transform: scale(1.1);
+    }
+    
+    .social-item:nth-child(1):hover {
+        background: rgba(51, 51, 51, 0.8);
+    }
+    
+    .social-item:nth-child(2):hover {
+        background: rgba(0, 119, 181, 0.8);
+    }
+    
+    .social-item:nth-child(3):hover {
+        background: rgba(128, 41, 144, 0.8);
     }
 }
