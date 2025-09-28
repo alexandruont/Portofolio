@@ -9,61 +9,21 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/particles.js/2.0.0/particles.min.js"></script>
+    <script>
+    window.va = window.va || function () { (window.vaq = window.vaq || []).push(arguments); };
+    </script>
+    <script defer src="/_vercel/insights/script.js"></script>
     <link rel="stylesheet" href="css/style.css">
     
     <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <!-- PNG favicons -->
     <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
     <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
-    
-    <!-- Apple Touch Icon -->
     <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
-    
-    <!-- Android Chrome -->
     <link rel="icon" type="image/png" sizes="192x192" href="assets/icons/android-chrome-192x192.png">
     <link rel="icon" type="image/png" sizes="512x512" href="assets/icons/android-chrome-512x512.png">
 </head>
 <body>
-    <a href="#home" class="visually-hidden-focusable">Skip to main content</a>
-    <!-- Social Icons -->
-    <!-- top right contacts
-    <div class="social-icons">
-        <a href="https://github.com/alexandruont" target="_blank" class="social-icon github" aria-label="GitHub Profile">
-            <i class="bi bi-github"></i>
-        </a>
-        <a href="https://www.linkedin.com/in/alexandru-mihai-ont/" target="_blank" class="social-icon linkedin" aria-label="LinkedIn Profile">
-            <i class="bi bi-linkedin"></i>
-        </a>
-    </div> --> 
-    <!-- nav 
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top navbar-custom" aria-label="Navigation bar">
-        <div class="container">
-            <a class="navbar-brand" href="#home">Alexandru Ont</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-label="Toggle navbar options">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#home" aria-label="Home">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about" aria-label="Read more about me">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills" aria-label="View my skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#projects" aria-label="View my portfolio projects">Projects</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact" aria-label="Contact me">Contact</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </nav> -->
-    <!-- Side Navigation -->
+    <!-- sidenav -->
     <nav class="sidenav" aria-label="Main navigation">
         <div class="hamburger">
             <i class="bi bi-list"></i>
@@ -87,9 +47,7 @@
                     <i class="bi bi-envelope"></i>
                 </a>
             </div>
-            
-            <!-- Social Icons in Sidenav -->
-            <div class="social-links">
+                        <div class="social-links">
                 <a href="https://github.com/alexandruont" target="_blank" class="social-item" aria-label="GitHub" title="GitHub">
                     <i class="bi bi-github"></i>
                 </a>
@@ -134,7 +92,7 @@
             <div class="row align-items-center">
                 <div class="col-lg-4 text-center mb-5 mb-lg-0" data-aos="fade-right">
                     <div class="profile-img-container">
-                        <img src="assets/images/IMG_4049.png" alt="Alexandru Ont" class="profile-img">
+                        <img src="assets/images/IMG_4049.webp" alt="Alexandru Ont" class="profile-img">
                     </div>
                 </div>
                 <div class="col-lg-8" data-aos="fade-left">
@@ -197,7 +155,7 @@
                             <h4 class="card-title">Web Development</h4>
                             <div class="skill-tags">
                                 <span class="skill-tag">JavaScript</span>
-                                <span class="skill-tag">HTML/CSS</span>
+                                <span class="skill-tag">HTML & CSS</span>
                                 <span class="skill-tag">PHP</span>
                                 <span class="skill-tag">Node.js</span>
                                 <span class="skill-tag">Bootstrap</span>
@@ -239,67 +197,150 @@
                     <h2 class="display-5 fw-bold section-title" data-aos="fade-up">Featured Projects</h2>
                 </div>
             </div>
-            <div class="row g-4">
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="100">
-                    <div class="card project-card">
-                        <div class="project-image ml">
-                            <i class="bi bi-graph-up"></i>
+            <div class="row g-5">
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+                    <div class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?w=400&h=280&fit=crop&crop=center" alt="License Plate Detection AI" class="project-image-new">
+                            <div class="project-category ml">MACHINE LEARNING</div>
+                            <a href="https://github.com/alexandruont/Object-Detection-Model" class="project-external-link" target="_blank" aria-label="View Project">
+                                <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Predictive Analytics Dashboard</h4>
-                            <p class="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. 
-                            <div class="mb-3">
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">TensorFlow</span>
-                                <span class="tech-tag">Flask</span>
-                                <span class="tech-tag">React</span>
+                        <div class="project-content-new">
+                            <h3 class="project-title-new">License Plate Detection AI</h3>
+                            <p class="project-description-new">
+                                A real-time object detection system using YOLOv8 and OpenCV, capable of detecting license plates from video files or live webcam feeds, trained on a custom dataset.
+                            </p>
+                            <div class="project-tech-new">
+                                <span class="tech-badge">YOLOv8</span>
+                                <span class="tech-badge">OpenCV</span>
+                                <span class="tech-badge">Python</span>
+                                <span class="tech-badge">PyTorch</span>
                             </div>
-                            <div class="d-flex gap-2">
-                                <a href="https://github.com/alexandruont/OnlineYOLODetection" class="btn btn-outline-primary btn-sm">GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="200">
-                    <div class="card project-card">
-                        <div class="project-image web">
-                            <i class="bi bi-globe"></i>
-                        </div>
-                        <div class="card-body">
-                            <h4 class="card-title">E-commerce Platform</h4>
-                            <p class="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus. 
-                            <div class="mb-3">
-                                <span class="tech-tag">React</span>
-                                <span class="tech-tag">Node.js</span>
-                                <span class="tech-tag">MongoDB</span>
-                                <span class="tech-tag">Scikit-learn</span>
-                            </div>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
-                            </div>
+                            <a href="https://github.com/alexandruont/Object-Detection-Model" class="project-link-new" target="_blank">Read more</a>
                         </div>
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4" data-aos="fade-up" data-aos-delay="300">
-                    <div class="card project-card">
-                        <div class="project-image data">
-                            <i class="bi bi-bar-chart"></i>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="200">
+                    <div class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/learnify.webp" alt="Learning Management System" class="project-image-new">
+                            <div class="project-category web">WEB APP</div>
+                            <a href="https://github.com/alexandruont/Learnify" class="project-external-link" target="_blank" aria-label="View Project">
+                                <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
                         </div>
-                        <div class="card-body">
-                            <h4 class="card-title">Data Visualization Suite</h4>
-                            <p class="card-text text-muted">
-                                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus et pulvinar eros, id tempor est. Cras eu interdum ligula, quis ullamcorper neque. Aliquam erat volutpat. Proin non nunc nec orci molestie finibus.
-                            <div class="mb-3">
-                                <span class="tech-tag">D3.js</span>
-                                <span class="tech-tag">Python</span>
-                                <span class="tech-tag">FastAPI</span>
-                                <span class="tech-tag">PostgreSQL</span>
+                        <div class="project-content-new">
+                            <h3 class="project-title-new">Learnify</h3>
+                            <p class="project-description-new">
+                                A comprehensive Learning Management System for Computer Science education. Features role-based dashboards, course creation, PDF delivery, quiz management, and result tracking with full CRUD operations and responsive design.
+                            </p>
+                            <div class="project-tech-new">
+                                <span class="tech-badge">PHP</span>
+                                <span class="tech-badge">MySQL</span>
+                                <span class="tech-badge">HTML & CSS</span>
+                                <span class="tech-badge">JavaScript</span>
                             </div>
-                            <div class="d-flex gap-2">
-                                <a href="#" class="btn btn-outline-primary btn-sm">GitHub</a>
+                            <a href="https://github.com/alexandruont/Learnify" class="project-link-new" target="_blank">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="300">
+                    <div class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/AutoRosNode.webp" alt="Robot Control Interface" class="project-image-new">
+                            <div class="project-category iot">ROBOTICS</div>
+                            <a href="https://github.com/alexandruont/AutoRosPrct" class="project-external-link" target="_blank" aria-label="View Project">
+                                <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
+                        <div class="project-content-new">
+                            <h3 class="project-title-new">AutoRos Robot Control</h3>
+                            <p class="project-description-new">
+                                Real-time web interface for controlling a 6-axis robotic arm. Features WebSocket communication, TCP hardware integration, live camera simulation, and responsive controls with bidirectional server communication.
+                            </p>
+                            <div class="project-tech-new">
+                                <span class="tech-badge">Node.js</span>
+                                <span class="tech-badge">Socket.io</span>
+                                <span class="tech-badge">TCP</span>
+                                <span class="tech-badge">HTML & CSS</span>
                             </div>
+                            <a href="https://github.com/alexandruont/AutoRosPrct" class="project-link-new" target="_blank">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+                    <div class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1509228468518-180dd4864904?w=400&h=280&fit=crop&crop=center" alt="Graph Algorithm Visualization" class="project-image-new">
+                            <div class="project-category algo">ALGORITHMS</div>
+                            <a href="https://github.com/alexandruont/ProgrammingCompetition2025" class="project-external-link" target="_blank" aria-label="View Project">
+                                <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
+                        <div class="project-content-new">
+                            <h3 class="project-title-new">Graph Traversal Algorithm</h3>
+                            <p class="project-description-new">
+                                Competition-winning graph traversal solution using Depth-First Search with pruning and heuristic optimization. Features cycle detection, time constraints, and artifact tracking for maximum scoring paths.
+                            </p>
+                            <div class="project-tech-new">
+                                <span class="tech-badge">DFS</span>
+                                <span class="tech-badge">Branch & Bound</span>
+                                <span class="tech-badge">Heuristics</span>
+                                <span class="tech-badge">Python</span>
+                            </div>
+                            <a href="https://github.com/alexandruont/ProgrammingCompetition2025" class="project-link-new" target="_blank">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="500">
+                    <div class="project-card-new">
+                        <div class="project-image-wrapper">
+                            <img src="assets/images/yoloObjectDetection.webp" alt="Real-time Detection System" class="project-image-new">
+                            <div class="project-category ml">COMPUTER VISION</div>
+                            <a href="https://github.com/alexandruont/OnlineYOLODetection" class="project-external-link" target="_blank" aria-label="View Project">
+                                <i class="bi bi-box-arrow-up-right"></i>
+                            </a>
+                        </div>
+                        <div class="project-content-new">
+                            <h3 class="project-title-new">Online YOLO Detection</h3>
+                            <p class="project-description-new">
+                                Web-based real-time object detection system using YOLO algorithms. Features batch analysis capabilities and confidence-based filtering with detailed detection reports and performance metrics.
+                            </p>
+                            <div class="project-tech-new">
+                                <span class="tech-badge">YOLO</span>
+                                <span class="tech-badge">Flask</span>
+                                <span class="tech-badge">PyTorch</span>
+                            </div>
+                            <a href="https://github.com/alexandruont/OnlineYOLODetection" class="project-link-new" target="_blank">Read more</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 6: Future Project Placeholder -->
+                <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="600">
+                    <div class="project-card-new coming-soon">
+                        <div class="project-image-wrapper">
+                            <img src="https://images.unsplash.com/photo-1517077304055-6e89abbf09b0?w=400&h=280&fit=crop&crop=center" alt="Coming Soon" class="project-image-new">
+                            <div class="project-category future">COMING SOON</div>
+                        </div>
+                        <div class="project-content-new">
+                            <h3 class="project-title-new">Next Innovation</h3>
+                            <p class="project-description-new">
+                                Currently working on exciting new projects in machine learning and web development. Stay tuned for updates on my latest work in AI, robotics, and full-stack applications.
+                            </p>
+                            <div class="project-tech-new">
+                                <span class="tech-badge">React</span>
+                                <span class="tech-badge">PyTorch</span>
+                                <span class="tech-badge">Docker</span>
+                                <span class="tech-badge">AWS</span>
+                            </div>
+                            <a href="#contact" class="project-link-new">Get in touch</a>
                         </div>
                     </div>
                 </div>
@@ -333,9 +374,7 @@
         </div>
     </footer>
 
-    <!-- Bootstrap JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
-    <!-- AOS Animation JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
     <script src="js/script.js"></script>
     
