@@ -2,7 +2,7 @@
 
 Live at **[alexandruont.com](https://alexandruont.com)**.
 
-Static portfolio site for Alexandru Ont, Machine Learning Engineer — computer vision, edge AI and LLM-powered applications.
+Static portfolio site for Alexandru Ont, Machine Learning Engineer, computer vision, edge AI and LLM-powered applications.
 
 ## Stack
 
