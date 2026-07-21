@@ -101,7 +101,8 @@ document.addEventListener('DOMContentLoaded', function() {
     const sidenav = document.querySelector('.sidenav');
     
     hamburger.addEventListener('click', function() {
-        sidenav.classList.toggle('open');
+        const isOpen = sidenav.classList.toggle('open');
+        hamburger.setAttribute('aria-expanded', isOpen);
     });
     
     // Close menu when clicking on nav links (mobile)
@@ -110,6 +111,7 @@ document.addEventListener('DOMContentLoaded', function() {
         link.addEventListener('click', function() {
             if (window.innerWidth <= 768) {
                 sidenav.classList.remove('open');
+                hamburger.setAttribute('aria-expanded', 'false');
             }
         });
     });
@@ -118,8 +120,15 @@ document.addEventListener('DOMContentLoaded', function() {
     document.addEventListener('click', function(e) {
         if (window.innerWidth <= 768 && !sidenav.contains(e.target)) {
             sidenav.classList.remove('open');
+            hamburger.setAttribute('aria-expanded', 'false');
         }
     });
+
+    // Keep footer year current
+    const yearEl = document.getElementById('footer-year');
+    if (yearEl) {
+        yearEl.textContent = new Date().getFullYear();
+    }
 });
 
 // Smooth scrolling for navigation links

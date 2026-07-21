@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="pitch" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#052e16"/>
+      <stop offset="1" stop-color="#14532d"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#pitch)"/>
+  <!-- mowing stripes -->
+  <g fill="#16a34a" opacity="0.10">
+    <rect x="0" y="0" width="800" height="70"/>
+    <rect x="0" y="140" width="800" height="70"/>
+    <rect x="0" y="280" width="800" height="70"/>
+    <rect x="0" y="420" width="800" height="70"/>
+  </g>
+  <!-- pitch lines -->
+  <g fill="none" stroke="#f8fafc" stroke-width="3" opacity="0.55">
+    <rect x="40" y="40" width="720" height="480"/>
+    <line x1="400" y1="40" x2="400" y2="520"/>
+    <circle cx="400" cy="280" r="70"/>
+    <rect x="40" y="150" width="110" height="260"/>
+    <rect x="650" y="150" width="110" height="260"/>
+  </g>
+  <!-- passing network edges -->
+  <g stroke="#06b6d4" fill="none" opacity="0.8">
+    <path d="M150 420 L300 330" stroke-width="6"/>
+    <path d="M300 330 L430 380" stroke-width="4"/>
+    <path d="M300 330 L390 190" stroke-width="7"/>
+    <path d="M390 190 L560 240" stroke-width="5"/>
+    <path d="M430 380 L560 240" stroke-width="3"/>
+    <path d="M560 240 L660 300" stroke-width="6"/>
+  </g>
+  <!-- player nodes -->
+  <g>
+    <circle cx="150" cy="420" r="20" fill="#6366f1" stroke="#f8fafc" stroke-width="3"/>
+    <circle cx="300" cy="330" r="26" fill="#6366f1" stroke="#f8fafc" stroke-width="3"/>
+    <circle cx="390" cy="190" r="22" fill="#6366f1" stroke="#f8fafc" stroke-width="3"/>
+    <circle cx="430" cy="380" r="17" fill="#6366f1" stroke="#f8fafc" stroke-width="3"/>
+    <circle cx="560" cy="240" r="24" fill="#ec4899" stroke="#f8fafc" stroke-width="3"/>
+    <circle cx="660" cy="300" r="18" fill="#ec4899" stroke="#f8fafc" stroke-width="3"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f8fafc" text-anchor="middle">
+    <text x="150" y="426">2</text>
+    <text x="300" y="336">8</text>
+    <text x="390" y="196">10</text>
+    <text x="430" y="386">6</text>
+    <text x="560" y="246">9</text>
+    <text x="660" y="306">7</text>
+  </g>
+  <!-- xG stat panel -->
+  <g font-family="Arial, sans-serif">
+    <rect x="540" y="60" width="210" height="128" rx="12" fill="#020617" opacity="0.78"/>
+    <text x="560" y="92" font-size="17" fill="#94a3b8">xG · pass map</text>
+    <rect x="560" y="106" width="150" height="12" rx="6" fill="#06b6d4"/>
+    <rect x="560" y="128" width="104" height="12" rx="6" fill="#6366f1"/>
+    <rect x="560" y="150" width="66" height="12" rx="6" fill="#ec4899"/>
+    <text x="560" y="180" font-size="15" fill="#94a3b8">StatsBomb events</text>
+  </g>
+</svg>

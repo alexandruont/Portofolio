@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 560" preserveAspectRatio="xMidYMid slice">
+  <defs>
+    <linearGradient id="gbg" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#111827"/>
+      <stop offset="1" stop-color="#312e81"/>
+    </linearGradient>
+    <linearGradient id="path" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0" stop-color="#6366f1"/>
+      <stop offset="1" stop-color="#ec4899"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="560" fill="url(#gbg)"/>
+  <g stroke="#475569" stroke-width="1" opacity="0.25">
+    <path d="M0 112 H800 M0 224 H800 M0 336 H800 M0 448 H800 M160 0 V560 M320 0 V560 M480 0 V560 M640 0 V560"/>
+  </g>
+  <!-- unvisited edges -->
+  <g stroke="#64748b" stroke-width="3" opacity="0.55">
+    <path d="M120 140 L300 90"/>
+    <path d="M300 90 L520 130"/>
+    <path d="M120 140 L220 300"/>
+    <path d="M520 130 L640 250"/>
+    <path d="M220 300 L400 240"/>
+    <path d="M400 240 L640 250"/>
+    <path d="M220 300 L300 460"/>
+    <path d="M640 250 L680 440"/>
+    <path d="M300 460 L500 420"/>
+  </g>
+  <!-- traversal path -->
+  <g stroke="url(#path)" stroke-width="8" fill="none" stroke-linecap="round">
+    <path d="M120 140 L220 300 L400 240 L640 250 L680 440"/>
+  </g>
+  <!-- edge weights -->
+  <g font-family="Arial, sans-serif" font-size="17" fill="#cbd5e1">
+    <text x="196" y="80">4</text>
+    <text x="418" y="96">7</text>
+    <text x="140" y="230">2</text>
+    <text x="300" y="256">3</text>
+    <text x="516" y="228">5</text>
+    <text x="596" y="180">6</text>
+    <text x="238" y="392">8</text>
+    <text x="682" y="352">4</text>
+    <text x="402" y="456">9</text>
+  </g>
+  <!-- nodes -->
+  <g stroke-width="4">
+    <circle cx="120" cy="140" r="26" fill="#10b981" stroke="#f8fafc"/>
+    <circle cx="300" cy="90" r="20" fill="#1e293b" stroke="#64748b"/>
+    <circle cx="520" cy="130" r="20" fill="#1e293b" stroke="#64748b"/>
+    <circle cx="220" cy="300" r="24" fill="#6366f1" stroke="#f8fafc"/>
+    <circle cx="400" cy="240" r="24" fill="#8b5cf6" stroke="#f8fafc"/>
+    <circle cx="640" cy="250" r="24" fill="#c026d3" stroke="#f8fafc"/>
+    <circle cx="300" cy="460" r="20" fill="#1e293b" stroke="#64748b"/>
+    <circle cx="500" cy="420" r="20" fill="#1e293b" stroke="#64748b"/>
+    <circle cx="680" cy="440" r="26" fill="#ec4899" stroke="#f8fafc"/>
+  </g>
+  <g font-family="Arial, sans-serif" font-size="16" font-weight="700" fill="#f8fafc" text-anchor="middle">
+    <text x="120" y="146">S</text>
+    <text x="680" y="446">G</text>
+  </g>
+  <!-- DFS stack readout -->
+  <g font-family="Arial, sans-serif">
+    <rect x="560" y="48" width="196" height="96" rx="12" fill="#020617" opacity="0.8"/>
+    <text x="580" y="80" font-size="17" fill="#94a3b8">DFS + pruning</text>
+    <text x="580" y="112" font-size="20" font-weight="700" fill="#06b6d4">best = 24 pts</text>
+  </g>
+</svg>

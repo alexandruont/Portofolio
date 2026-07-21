@@ -71,6 +71,20 @@ body::after {
     background: var(--primary);
     transform: translateY(-3px);
     box-shadow: 0 10px 25px rgba(236, 72, 153, 0.3);
+    color: white;
+}
+
+.btn-outline-custom {
+    background: transparent;
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.7);
+}
+
+.btn-outline-custom:hover {
+    background: rgba(255, 255, 255, 0.15);
+    border-color: white;
+    color: white;
+    transform: translateY(-3px);
 }
 
 /* Section backgrounds with white containers */
@@ -166,45 +180,7 @@ body::after {
     white-space: nowrap;
 }
 
-/* OLD Project Cards (Legacy - Keep for compatibility) */
-.project-card {
-    background: white;
-    border-radius: 15px;
-    overflow: hidden;
-    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    height: 100%;
-    border: none;
-}
-
-.project-card:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
-}
-
-.project-image {
-    height: 150px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    color: white;
-    font-size: 3rem;
-}
-
-.project-image.ml { background: linear-gradient(45deg, var(--primary), var(--accent)); }
-.project-image.web { background: linear-gradient(45deg, var(--secondary), var(--warning)); }
-.project-image.data { background: linear-gradient(45deg, var(--success), var(--primary)); }
-
-.tech-tag {
-    background: var(--primary);
-    color: white;
-    padding: 0.3rem 0.8rem;
-    border-radius: 15px;
-    font-size: 0.8rem;
-    margin: 0.2rem;
-}
-
-/* NEW Improved Project Cards - Jason-inspired styling */
+/* Project Cards */
 .project-card-new {
     background: white;
     border-radius: 12px;
@@ -219,11 +195,6 @@ body::after {
 .project-card-new:hover {
     transform: translateY(-4px);
     box-shadow: 0 8px 40px rgba(0, 0, 0, 0.12);
-}
-
-.project-card-new.coming-soon {
-    opacity: 0.85;
-    border: 2px dashed rgba(99, 102, 241, 0.2);
 }
 
 /* Project Image */
@@ -276,8 +247,8 @@ body::after {
     background: linear-gradient(135deg, var(--primary) 0%, var(--secondary) 100%);
 }
 
-.project-category.future {
-    background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%);
+.project-category.llm {
+    background: linear-gradient(135deg, var(--accent) 0%, var(--success) 100%);
 }
 
 /* External Link */
@@ -420,6 +391,55 @@ body::after {
     border-radius: 2px;
 }
 
+/* Contact Cards */
+.contact-card {
+    display: block;
+    background: white;
+    border-radius: 15px;
+    padding: 2rem;
+    box-shadow: 0 5px 25px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    height: 100%;
+    text-align: center;
+    text-decoration: none;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.contact-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 35px rgba(0, 0, 0, 0.15);
+}
+
+.contact-card h4 {
+    color: #1f2937;
+    font-size: 1.2rem;
+    font-weight: 700;
+    margin-bottom: 0.5rem;
+}
+
+.contact-card p {
+    color: #6b7280;
+    font-size: 0.95rem;
+    margin-bottom: 0;
+    word-break: break-word;
+}
+
+.contact-icon {
+    width: 60px;
+    height: 60px;
+    border-radius: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.8rem;
+    margin: 0 auto 1rem auto;
+}
+
+.contact-icon.email { background: linear-gradient(45deg, var(--secondary), var(--warning)); }
+.contact-icon.linkedin { background: linear-gradient(45deg, #0077b5, var(--accent)); }
+.contact-icon.github { background: linear-gradient(45deg, #24292e, #6b7280); }
+
 /* Footer */
 footer {
     background: rgba(33, 37, 41, 0.95) !important;
@@ -494,6 +514,9 @@ footer {
 
 .hamburger {
     display: none;
+    background: none;
+    border: none;
+    padding: 0;
 }
 
 .nav-content {
